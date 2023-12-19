@@ -48,7 +48,7 @@ function MovieDetails({
       try {
         setLoading(true);
         const res = await fetch(
-          `http://www.omdbapi.com/?apikey=74409b9d&i=${selectedId}`
+          `https://www.omdbapi.com/?apikey=74409b9d&i=${selectedId}`
         );
         if (res.ok) {
           const data = await res.json();
@@ -133,7 +133,7 @@ function Rating({
   return (
     <div className="rating">
       {movieExist ? (
-        <div style={{ fontSize: "25px", color: "red",  }}>
+        <div style={{ fontSize: "25px", color: "red" }}>
           You rated this movie {movieExist.extRating} ⭐
         </div>
       ) : (
